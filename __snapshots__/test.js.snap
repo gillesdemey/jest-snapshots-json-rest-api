@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should not serialize non-HTTP response 1`] = `
+Object {
+  "foo": "bar",
+}
+`;
+
+exports[`should serialize HTTP response 1`] = `
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "properties": {
+    "hello": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}
+`;

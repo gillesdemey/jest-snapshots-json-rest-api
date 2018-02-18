@@ -1,0 +1,27 @@
+{
+  "name": "jest-snapshots-json-rest-api",
+  "version": "1.0.0",
+  "description": "Jest Snapshots serializer for JSON REST APIs",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard | snazzy",
+    "test": "npm run lint && jest --coverage"
+  },
+  "keywords": [
+    "json",
+    "rest api",
+    "jest",
+    "serializer"
+  ],
+  "author": "Gilles De Mey <gilles.de.mey@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^22.3.0",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "generate-schema": "^2.6.0",
+    "sort-keys": "^2.0.0"
+  }
+}

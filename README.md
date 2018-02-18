@@ -1,4 +1,6 @@
-# jest-snapshots-json-rest-api
+# jest-snapshots-json-rest-api 
+
+[![Build Status](https://travis-ci.org/gillesdemey/jest-snapshots-json-rest-api.svg?branch=master)](https://travis-ci.org/gillesdemey/jest-snapshots-json-rest-api)
 
 Jest Snapshots serializer for JSON REST APIs.
 

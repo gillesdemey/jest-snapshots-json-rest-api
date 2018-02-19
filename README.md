@@ -9,6 +9,25 @@ Jest Snapshots serializer for JSON REST APIs.
 
 `yarn add --dev jest-snapshots-json-rest-api`
 
+Add the following to your Jest configuration in `package.json`
+
+```json
+{
+  "jest": {
+    "snapshotSerializers": ["jest-snapshots-json-rest-api"]
+  }
+}
+```
+
+or manually add the snapshot serializer to your test suite:
+
+```javascript
+const serializer = require('jest-snapshots-json-rest-api')
+
+// add the JSON REST API snapshot serializer
+expect.addSnapshotSerializer(serializer)
+```
+
 ## Usage
 
 The object you want to snapshot **must** match the following struct for the serializer to work:
@@ -22,15 +41,11 @@ The object you want to snapshot **must** match the following struct for the seri
 }
 ```
 
-Modules like `superstruct` work out-of-the-box.
+Modules like `supertest` work out-of-the-box.
 
 ```javascript
 const app = require('./app')
-const request = require('superstruct')
-const serializer = require('jest-snapshots-json-rest-api')
-
-// add the JSON REST API snapshot serializer
-expect.addSnapshotSerializer(serializer)
+const request = require('supertest')
 
 test('get a user', async () => {
   const response = await request(app)

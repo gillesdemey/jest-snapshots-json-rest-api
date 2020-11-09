@@ -6,11 +6,35 @@ Object {
 }
 `;
 
+exports[`should serialize HTTP Buffer response 1`] = `
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "properties": {
+    "Hello": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}
+`;
+
 exports[`should serialize HTTP response 1`] = `
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "properties": {
     "hello": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}
+`;
+
+exports[`should serialize LightMyRequest HTTP response 1`] = `
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "properties": {
+    "Hello": {
       "type": "string"
     }
   },

@@ -41,7 +41,7 @@ The object you want to snapshot **must** match the following struct for the seri
 }
 ```
 
-Modules like `supertest` work out-of-the-box.
+Modules like `supertest` work out-of-the-box. Also works with [`LightMyRequest`](https://github.com/fastify/light-my-request).
 
 ```javascript
 const app = require('./app')

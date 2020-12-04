@@ -1,10 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should not serialize array 1`] = `
+Array [
+  true,
+  "a",
+  1,
+  Object {
+    "foo": "bar",
+  },
+  null,
+  undefined,
+]
+`;
+
 exports[`should not serialize non-HTTP response 1`] = `
 Object {
   "foo": "bar",
+  "null": null,
+  "undefined": undefined,
 }
 `;
+
+exports[`should not serialize null 1`] = `null`;
+
+exports[`should not serialize undefined 1`] = `undefined`;
 
 exports[`should serialize HTTP Buffer response 1`] = `
 {

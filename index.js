@@ -3,13 +3,12 @@
 const sortKeys = require('sort-keys')
 const toSchema = require('generate-schema').json
 
-const isObject = res => typeof res === 'object' && !!res
 const isSupertest = res => res.status && res.body
 const isLightMyRequest = res => res.statusCode && res.body
 
 const JSONRestAPISnapshotSerializer = {
   test: (res) =>
-    isObject(res) && [
+    res && [
       isSupertest,
       isLightMyRequest
     ].some(testFn => testFn(res)),

@@ -1,6 +1,6 @@
 {
   "name": "jest-snapshots-json-rest-api",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Jest Snapshots serializer for JSON REST APIs",
   "main": "index.js",
   "scripts": {

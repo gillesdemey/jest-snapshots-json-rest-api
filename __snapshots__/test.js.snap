@@ -60,3 +60,25 @@ exports[`should serialize LightMyRequest HTTP response 1`] = `
   "type": "object"
 }
 `;
+
+exports[`should sort required properties in arrays 1`] = `
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "items": {
+    "properties": {
+      "foo": {
+        "type": "string"
+      },
+      "hello": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "foo",
+      "hello"
+    ],
+    "type": "object"
+  },
+  "type": "array"
+}
+`;

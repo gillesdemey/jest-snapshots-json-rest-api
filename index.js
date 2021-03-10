@@ -15,6 +15,12 @@ const JSONRestAPISnapshotSerializer = {
   print: ({ body }) => {
     const contents = tryParse(body)
     const schema = sortKeys(toSchema(contents), { deep: true })
+
+    // sort the required items array to make it a deterministic output
+    if (schema.items && schema.items.required) {
+      schema.items.required = schema.items.required.sort()
+    }
+
     return JSON.stringify(schema, null, 2)
   }
 }

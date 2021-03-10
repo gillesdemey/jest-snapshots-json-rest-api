@@ -35,3 +35,14 @@ test('should not serialize undefined', () => {
 test('should not serialize array', () => {
   expect([true, 'a', 1, { foo: 'bar' }, null, undefined]).toMatchSnapshot()
 })
+
+test('should sort required properties in arrays', () => {
+  const object = {
+    status: 200,
+    body: [
+      { hello: 'world', foo: 'bar' },
+      { hello: 'gilles', foo: 'baz' }
+    ]
+  }
+  expect(object).toMatchSnapshot()
+})
